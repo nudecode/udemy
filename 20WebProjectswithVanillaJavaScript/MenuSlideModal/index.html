@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1e6705f353.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Menuslide and Modal</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/profile.jpg" alt="user">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <button id="toggle" class="toggle">
+            <i class="fa fa-bars fa2x"></i>
+        </button>
+
+        <h1>Provisional supervision</h1>
+
+        <p>Supervision and professional development for provisional psychologists on the 4+2 and 5+1 internship pathways Australia wide!</p>
+
+        <button class="cta-btn" id="open">Sign Up</button>
+
+    </header>
+
+    <div class="container">
+        <h2>Provisional Supervision</h2>
+
+        <p>Online supervision and professional development for provisional psychologists completing the 4+2 and 5+1 internship pathways Australia wide! Meet all your 8 competencies in one place. You choose how long you join for and what inclusions you need.</p>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae provident doloribus consectetur delectus cumque expedita perferendis pariatur, repudiandae rem laudantium!</p> -->
+
+        <h2>Tell Me More</h2>
+
+        <p>Vanessa Allen is a registered psychologist, a member of the Australian Psychological Society (APS), a STAP trained Board Approved Supervisor. and a previous committee member of the APS Executive Committee, Brisbane and North Queensland Area.</p>
+        <p>Vanessa has experience working with children, adults and families in administering psychometric assessments, counselling and psycho educational groups; long term unemployed and people with disabilities in their return to work; veterans and their families, case managing external providers; cancer care, with individuals couples and families; employee assistance providers services; crisis and trauma care; and medico-legal and work cover clients in private practice.</p>
+        <p>Vanessa’s areas of interest include the supervision, mentoring and developing of psychologists, and improving the health and wellbeing of people with mental illness and adjustment difficulties, particularly those who have experienced trauma; by providing evidence based, clinical interventions and support.</p>
+
+
+        <h2>Benifits</h2>
+        <ul>
+            <li>Lifetime Access</li>
+            <li>30 Day Money Back</li>
+            <li>Tailored Customer Support</li>
+        </ul>
+
+        <p>The Provisional Psychologist Hub makes completing your program easy. Access supervision and PD at times that fit with your schedule. Access us AUSTRALIA WIDE – no need to spend time traveling to supervision or taking off a full day of work for PD. There are no lock in contracts – stay as little or as long as you need. We provide individual and group supervision (Principal and Secondary), professional development and access to an assessment library. Or if you want to take all the worry out of your program, join one of our memberships and we will take care of all you program requirements.</p>
+        <div class="footer">
+            <button class="callback-btn" id="callback">Call me</button>
+        </div>
+        
+
+    </div>
+
+    <!-- modal -->
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <button class="close-btn" id="close">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3>SIgn Up</h3>
+            </div>
+            <div class="modal-content">
+                <p>Register with us to get offeres, support and more</p>
+                <form  class="modal-form">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter Name" class="form-input">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter email" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password" class="form-input">
+                    </div>
+                    <div>
+                        <label for="confirm">confirm Password</label>
+                        <input type="password" id="confirm" placeholder="confirm password" class="form-input">
+                    </div>
+                    <input type="submit" value="submit" class="submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-container" id="callback-modal">
+        <div class="callback-modal">
+            <button class="close-btn" id="callback-close">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3>Call me</h3>
+            </div>
+            <div class="modal-content">
+                <p>Request a call back</p>
+                <form  class="modal-form">
+                    <div>
+                        <label for="callback-name">Name</label>
+                        <input type="text" id="callback-name" placeholder="Enter Name" class="form-input">
+                    </div>
+                    <div>
+                        <label for="callback-email">Email</label>
+                        <input type="email" id="callback-email" placeholder="Enter email" class="form-input">
+                    </div>
+                    <div>
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" placeholder="xxxxxxxxxx" class="form-input">
+                    </div>
+                    <input type="submit" value="submit" class="submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

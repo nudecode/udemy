@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <p>Guess the hidden word - Enter a letter</p>
+    <button id="start">start</button>
+
+    <div class="game-container">
+        <svg height="250" width="200" class="figure-container">
+            <!-- hangman frame -->
+            <!-- x axis is the horizontial
+                 x1 is the start
+                 x2 is the end
+                 y axis is the vertical 
+                 y1 is the start
+                 y2 is the end.-->
+            <line x1="60" y1="20" x2="140" y2="20"></line> <!--top horizontial line -->
+            <line x1="140" y1="20" x2="140" y2="50"></line> <!--first vertical line at the end of the first top hozizontal line across bar-->
+            <line x1="60" y1="20" x2="60" y2="230"></line> <!--side vertical line -->
+            <line x1="20" y1="230" x2="100" y2="230"></line> <!--bottom horizontial line-->
+
+            <!-- head of man -->
+            <!-- circle takes in 
+                cx = x coordinates of the centre of the circle.
+                cy = y coordinates of the center of the circle. 
+                r = the radius -->
+            <circle cx="140" cy="70" r="20" class="figure-part"></circle> <!-- starts at 140 because the first vertical line ends at 140 -->
+
+            <!-- body -->
+                <!-- body is lines so follows the same x and y as the hangman frame above-->
+                <line x1="140" y1="90" x2="140" y2="150" class="figure-part"></line> <!--  body x1 statrs at 140 which is the same as the cx in the circle-->
+            <!-- arms -->
+            <!-- body is lines so follows the same x and y as the hangman frame above-->
+                <line x1="140" y1="120" x2="120" y2="100" class="figure-part"></line> <!-- Left arm looking at the screen-->
+                <line x1="140" y1="120" x2="160" y2="100" class="figure-part"></line> <!-- Right arm looking at screen only chnages the x2 line position-->
+            <!-- legs -->
+            <!-- body is lines so follows the same x and y as the hangman frame above-->
+                <line x1="140" y1="150" x2="120" y2="180" class="figure-part"></line> <!-- Left leg looking at the screen-->
+                <line x1="140" y1="150" x2="160" y2="180" class="figure-part"></line> <!-- Right leg looking at screen only chnages the x2 line position-->
+        </svg>
+
+        <div class="wrong-letters-container">
+            <div id="wrong-letters"></div>
+        </div>
+
+        <div class="word" id="word"></div>
+        
+    </div>
+
+    <!-- conainer for final mesages -->
+    <div class="popup-container" id="popup-container">
+
+        <div class="popup">
+            <h2 id="final-message"></h2>
+            <button id="play-button">Play Again?</button>
+        </div>
+    </div>
+
+    <!-- notification -->
+    <div class="notification-container" id="notification-container">
+        <P>You have already used this letter</P>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
